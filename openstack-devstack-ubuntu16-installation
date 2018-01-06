@@ -1,0 +1,31 @@
+#!bin/bash script
+
+
+#Ubuntu 16 update and upgrade
+
+sudo apt-get install update -y
+sudo apt-get upgrade -y
+#####################################################################
+
+# Create New User Stack & add to Sudors
+
+sudo adduser stack
+sudo -i echo "stack ALL=(ALL) NOPASSWD :ALL" >> /etc/sudoers
+exit
+###################################################################
+
+#Download Devstack from github 
+sudo apt-get install -y git 
+sudo git clone https://git.openstack.org/openstack-dev/devstack
+
+####################################################################
+
+#Avoiding eroors
+sudo rm /var/lib/dpkg/lock
+sudo rm /var/lib/apt/lists/lock
+sudo rm /var/lib/apt/archives/lock
+sudo rm -rf /var/lib/lists/*
+
+#####################################################################
+
+#
