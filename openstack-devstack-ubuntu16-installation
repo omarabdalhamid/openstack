@@ -16,7 +16,7 @@ exit
 
 #Download Devstack from github 
 sudo apt-get install -y git 
-sudo git clone https://git.openstack.org/openstack-dev/devstack
+sudo git clone https://github.com/omarabdalhamid/devstack.git
 
 ####################################################################
 
@@ -28,4 +28,6 @@ sudo rm -rf /var/lib/lists/*
 
 #####################################################################
 
-#
+#Run stack Script
+
+sudo sh /devstack/stack.sh
